@@ -1,7 +1,7 @@
 import React from "react";
 
 function Workspace() {
-  return <div></div>;
+  return <div>Workspace</div>;
 }
 
 export default Workspace;
