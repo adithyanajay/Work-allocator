@@ -5,9 +5,12 @@ import { DashBoard } from "../components/DashBoard";
 
 function Home() {
   return (
-    <div>
-      <TopBar/>
-      <DashBoard/>
+    <div className="max-h-screen flex ">
+      <Navbar />
+      <div className="content w-full">
+        <TopBar />
+        <DashBoard />
+      </div>
     </div>
   );
 }
