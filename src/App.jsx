@@ -6,7 +6,7 @@ import Notfound from "./page/Notfound";
 
 function App() {
   return (
-    <div>
+    <div className="max-h-screen">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Workspace />} />
