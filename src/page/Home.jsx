@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="max-h-screen flex ">
       <Navbar />
-      <div className="content w-full">
+      <div className="content w-full max-h-screen overflow-hidden">
         <TopBar />
         <DashBoard />
       </div>
