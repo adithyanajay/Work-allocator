@@ -6,18 +6,24 @@ function NavDropdown({ heading, items, icons }) {
   const [display, setDisplay] = useState(true);
   return (
     <div className="">
-      <div className="heading flex items-center justify-start gap-3">
-        <p className="text-white text-sm">{heading}</p>
-        <div
-          className="symbol w-5 cursor-pointer"
-          onClick={() => setDisplay(!display)}
-        >
+      <div
+        className="heading flex items-center justify-start gap-3 cursor-pointer border-b-2 pb-2"
+        onClick={() => setDisplay(!display)}
+      >
+        <p className="text-black text-sm">{heading}</p>
+        <div className="symbol w-5 cursor-pointer">
           <img src={icons} alt="" className="w-full" />
         </div>
       </div>
-      <div className={`users ${display ? "" : "hidden"}`}>
+      <div
+        className={`users ${display ? "" : "hidden"} max-h-44 overflow-scroll`}
+      >
         {items.users.map((item, key) => {
-          return <UserNavIcon name={item.name} key={key} icon={userIcon} />;
+          return (
+            <div className="my-2" key={key}>
+              <UserNavIcon name={item.name} key={key} icon={userIcon} />
+            </div>
+          );
         })}
       </div>
     </div>
