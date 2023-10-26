@@ -3,6 +3,20 @@
     height: 60vh;
     /* margin: 20px; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
     align-items: center;
+    border-radius: 2rem;
+    padding-bottom: 3.5rem;
+    
+}
+.work{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.date{
+    margin-top: -30px;
+    
+    
 }
