@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserNavIcon from "./UserNavIcon";
 import { userIcon } from "../assets";
 
-export const WorkBox = ({ Title, date, user, difficulty }) => {
+export const WorkBox = ({ Title, date, user, difficulty, pro }) => {
   let color = "";
 
   if (difficulty == 1) {
@@ -29,7 +29,9 @@ export const WorkBox = ({ Title, date, user, difficulty }) => {
         </p>
       </div>
 
-      <div className="bar">Completetion bar</div>
+      <div className="bar w-full h-2 border border-white  rounded-md mt-5 flex justify-start items-center">
+        <div className={`process w-${pro}/12 bg-white h-1  rounded-md`}></div>
+      </div>
     </div>
   );
 };
