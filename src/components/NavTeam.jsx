@@ -5,6 +5,7 @@ import { projects } from "../constants";
 
 function NavTeam({ setTeam }) {
   const [display, setDisplay] = useState(true);
+
   return (
     <div className="teams">
       <div className="heading flex items-center justify-start gap-3 border-b-2 py-2">

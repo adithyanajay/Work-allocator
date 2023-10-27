@@ -15,7 +15,7 @@ export const WorkBox = ({ Title, date, user, difficulty }) => {
 
   return (
     <div
-      className={`b-ox ${color} h-52 w-72 rounded-lg shadow-md cursor-pointer hover:opacity-95 p-5`}
+      className={`box ${color} h-52 w-72 rounded-lg shadow-md cursor-pointer hover:opacity-95 p-5`}
     >
       <div className="content ">
         <h1 className="Work-title text-white text-3xl font-extrabold mb-5">
