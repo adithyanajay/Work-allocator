@@ -34,7 +34,9 @@ The project is in its prototype stage, and there are several areas for improveme
 
 
 ## Screenshots
-(Add product screenshots here)
+<img width="1431" alt="Screenshot 2023-10-27 at 9 53 39 PM" src="https://github.com/adithyanajay/Work-allocator/assets/71365202/c11d7aef-7be2-40b1-8c93-e6879f20be67">
+<img width="1440" alt="Screenshot 2023-10-27 at 9 52 32 PM" src="https://github.com/adithyanajay/Work-allocator/assets/71365202/a483dc6c-2abf-4651-84bb-0807a59a34c9">
+
 
 ## Demo Video
 (Add a link to the demo video here)
