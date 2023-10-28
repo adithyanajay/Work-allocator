@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { editIcon, userIcon } from "../assets";
 import UserNavIcon from "../components/UserNavIcon";
+import { useNavigate } from "react-router-dom";
 
 function Team() {
   const [edit, setEdit] = useState(true);
@@ -9,7 +10,7 @@ function Team() {
   const [userEmail, setUserEmail] = useState("");
   const [users, setUsers] = useState([]);
   const [submit, setSubmit] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (teamName !== "" && users.length != 0) {
       setSubmit(true);
@@ -123,8 +124,9 @@ function Team() {
           className={`${
             submit ? "" : "hidden"
           }  relative right-0 bg-mainGreen text-white font-bold text-lg py-1 px-3 rounded-lg mt-5 hover:bg-white hover:text-mainGreen border-2 border-mainGreen`}
+          onClick={() => navigate("/dashboard")}
         >
-          <a href="/dashboard">Submit</a>
+          Submit
         </button>
       </div>
     </div>
