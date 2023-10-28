@@ -28,8 +28,7 @@ This project is a web-based application aimed at solving the problem of optimizi
 ## Features
 - Dashboard for task management and assignment.
 - Task creation with due dates and other relevant details.
-- Automatic suggestion of suitable team members based on tags.
-- Consideration of team members' current workloads.
+- Automatic suggestion of suitable team members based on tags.( Not implemented , logic written in 'src/components/SuggestedUser.jsx' )
 - Color Indication for works (Red for hard ones , blue for medium level difficulties ,green for simple works )
 - Microtasks and Progress Bars for detailed task tracking. (Not fully developed as it is a prototype version)
 
@@ -38,6 +37,7 @@ The project is in its prototype stage, and there are several areas for improveme
 - Improvements to enhance task assignment accuracy (Now we are using tags, we are planning to use a better algorithm to find the best person suited for the job).
 - We are also planning to create a User Login for the final product so that user can access user dashboard and view all the works assigned to them and complete microtasks from there, inturn resulting in the completion of the work 
 - Custom User creation , now we are working on a sample data of users which are stored in the file ' src/constants/index.js'
+- Consideration of team members' current workloads.
 
 
 ## Screenshots
@@ -49,15 +49,14 @@ The project is in its prototype stage, and there are several areas for improveme
 ## Demo Video
 https://youtu.be/uU02We54-fo
 
-## Microtasks and Progress Bars
+## Microtasks and Progress Bars (Not fully developed)
 The project includes a feature for breaking down tasks into microtasks, allowing for better tracking and management. The progress of a task is displayed through a progress bar that reflects the completion of microtasks. For example, if a work has 10 microtasks and 6 are done, the progress bar will be filled to 60%.
 
 ### Using Microtasks
-1. Log in as a manager or admin.
-2. Navigate to the dashboard.
-3. Click on a task to view its details.
-4. In the task detail page, you can create, edit, and delete microtasks associated with the task.
-5. Mark microtasks as completed as they are finished.
+1. Navigate to the dashboard.
+2. Click on a task to view its details.
+3. In the task detail page, you can create, edit, and delete microtasks associated with the task.
+4. Mark microtasks as completed as they are finished.
 
 ### Progress Bars
 - The progress bar on the task detail page dynamically updates as you complete microtasks, providing a visual representation of the task's completion status.
@@ -66,7 +65,6 @@ The project includes a feature for breaking down tasks into microtasks, allowing
 To run this project locally or deploy it on your server, follow these instructions.
 
 ### Prerequisites
-- npm installed on your system.
 - Basic understanding of React.js.
 
 ### Installation
@@ -86,13 +84,17 @@ To run this project locally or deploy it on your server, follow these instructio
     ```bash
    npm run dev
    ```
-4. Open your web browser and go to http://localhost:3000 to access the application.
+4. Open your web browser and go to https://localhost:port access the application.
 
 ## Usage
+## Creating Team
+- You can enter the team details and submiting it will result in you getting to the dashboard
+- Otherwise you can use the dummy team provided in the side bar ( dummy team will be removed in the final version of the product)
+
 ### Creating Tasks
-- Navigate to the dashboard.
 - Click on the "Add" button.
 - Fill in the task details, including the task name, due date.
+- Add micro tasks
 - Click "Submit" to create the task.
 
 ## Task Assignment
