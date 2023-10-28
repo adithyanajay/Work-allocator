@@ -5,18 +5,22 @@ const project_1 = {
     {
       name: "Adithya",
       img: userIcon,
+      tags: ['Python', 'JavaScript', 'React'],
     },
     {
       name: "Tressa",
       img: userIcon,
+      tags: ['Java', 'C++', 'Python'],
     },
     {
       name: "John",
       img: userIcon,
+      tags: ['React', 'CSS', 'HTML'],
     },
     {
       name: "Anna",
       img: userIcon,
+      tags: ['C', 'C++', 'Assembly','Linux'],
     },
   ],
 };
