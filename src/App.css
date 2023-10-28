@@ -20,3 +20,15 @@
     
     
 }
+.completed{
+    display: flex;
+    justify-content: space-between;
+}
+.notcompleted{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Microtaskwrap{
+    width:fit-content;
+}
