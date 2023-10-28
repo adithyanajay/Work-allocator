@@ -32,7 +32,7 @@ const project_2 = {
       img: userIcon,
     },
     {
-      name: "Rajes",
+      name: "Rajesh",
       img: userIcon,
     },
     {

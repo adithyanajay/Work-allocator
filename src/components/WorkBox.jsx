@@ -25,7 +25,7 @@ export const WorkBox = ({ title, date, user, difficulty, pro }) => {
         {/* <p className="text-white text-lg font-semibold">Assigned to user</p> */}
         <UserNavIcon icon={userIcon} name={user} hover="" />
         <p className="text-white text-sm font-semibold my-2">
-          Due date: 12/2/23
+          Due date: {date}
         </p>
       </div>
 

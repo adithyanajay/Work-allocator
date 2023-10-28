@@ -13,6 +13,7 @@ export const DashBoard = () => {
             user={work.user}
             difficulty={work.difficulty}
             pro={2}
+            date={work.date}
             key={key}
           />
         );
