@@ -1,6 +1,7 @@
 # Dynamic Work Allocation Algorithm
 
 ## Table of Contents
+- [Hosted Link](#Hosted-Link)
 - [Team Members](#Team-Members)
 - [Introduction](#introduction)
 - [Features](#features)
@@ -15,6 +16,9 @@
   - [Creating Tasks](#creating-tasks)
   - [Task Assignment](#task-assignment)
 - [License](#license)
+
+## Hosted Link
+workallocator.netlify.app/
 
 ## Team Members
 - [Adithya Ajay](https://github.com/adithyanajay)
