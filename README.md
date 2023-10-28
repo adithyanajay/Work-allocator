@@ -18,7 +18,7 @@
 - [License](#license)
 
 ## Hosted Link
-Link to the webapp](https://workallocator.netlify.app/)
+https://workallocator.netlify.app/
 
 ## Team Members
 - [Adithya Ajay](https://github.com/adithyanajay)
