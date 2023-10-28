@@ -15,6 +15,12 @@
   - [Task Assignment](#task-assignment)
 - [License](#license)
 
+## Team Members
+- [Adithya Ajay](https://github.com/adithyanajay)
+- [Harigovind M G](https://github.com/HarigovindM-G)
+- [Treesa George](https://github.com/tresanotfound)
+
+
 ## Introduction
 This project is a web-based application aimed at solving the problem of optimizing task assignment within a software development team. It employs a dynamic work allocation algorithm that considers various factors, including team members' skills, availability, and workload. The application is built using React.js and provides a dashboard for managers to create and manage tasks efficiently.
 
