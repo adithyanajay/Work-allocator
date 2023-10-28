@@ -1,29 +1,52 @@
-
 import React, { useState } from "react";
 import UserNavIcon from "../components/UserNavIcon";
-import { editIcon, userIcon } from "../assets";
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
-import { useState } from 'react';
-import { TaskDisplay } from "../components/TaskDisplay";
-import { TaskForm } from "../components/TaskForm";
+import { userIcon } from "../assets";
+import Todolist from "../components/Todolist";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { updateWork } from "../Redux/features/work/workSlice";
 
 function Addwork({ users }) {
+  const [workTitle, setWorkTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [difficulty, setDifficulty] = useState(1);
   const [selectedUser, setSelectedUser] = useState("");
   const [editUser, setEditUser] = useState(true);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const submitWork = () => {
+    if (
+      workTitle !== "" &&
+      description !== "" &&
+      selectedUser !== "" &&
+      editUser !== true
+    ) {
+      dispatch(
+        updateWork({
+          title: workTitle,
+          description: description,
+          user: selectedUser,
+          difficulty: difficulty
+        })
+      );
+      navigate("/dashboard");
+    }
+  };
 
   return (
     <div className="work h-full bg-slate-100 flex justify-center pb-30">
-      <div className=" max-h-96 w-3/4 max-w-3xl bg-white px-5 py-10 rounded-md shadow-md h-fit mt-16 flex gap-5">
+      <div className="relative max-h-96 w-3/4 max-w-3xl bg-white px-5 py-10 rounded-md shadow-md h-fit mt-16 flex gap-5">
         <div className="content w-1/2 ">
           <div className="work-title flex items-center gap-3 ">
             <h1 className="text-mainGreen text-xl block">Work Title:</h1>
             <input
               type="text"
               name="worktitle"
-              id=""
+              id="worktitle"
               className="border-2 border-mainGreen rounded-lg h-8 w-1/2 px-2 text-base"
+              value={workTitle}
+              onChange={(e) => setWorkTitle(e.target.value)}
             />
           </div>
           <div className="description mt-5">
@@ -33,6 +56,8 @@ function Addwork({ users }) {
               id=""
               cols="30"
               rows="2"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
               className="border-2 border-mainGreen rounded-lg resize-none p-3 text-base"
             ></textarea>
           </div>
@@ -75,6 +100,8 @@ function Addwork({ users }) {
               </label>
             </div>
           </form>
+
+          <Todolist />
         </div>
 
         <div className="user border-l-2 border-slate-200 pl-5">
@@ -112,55 +139,15 @@ function Addwork({ users }) {
             </button>
           </div>
         </div>
+        <button
+          onClick={submitWork}
+          className="absolute right-5 bottom-5 text-white bg-mainGreen px-3 py-2 text-lg rounded-md border-2 border-mainGreen hover:bg-white hover:text-mainGreen"
+        >
+          <p>Submit</p>
+        </button>
       </div>
-      
-      
-      //todolist
-      const [microTask,setMicroTask] = useState([]);
-
-  const addMicrotask = (microTaskText) =>{
-    const newMicrotask ={ id:uuidv4(), task: microTaskText ,completed: false}
-    setMicroTask([...microTask,newMicrotask])
-  }
-  
-  const toggleComplete = (id) =>{
-    const updatedMicrotask = microTask.map((tk)=>
-    tk.id==id ? {...tk,completed: !tk.completed} : tk
-    )
-    setMicroTask(updatedMicrotask)
-  }
-
-  const deleteMicrotask = (id) => {
-    const updatedMicrotask = microTask.filter((tk) => tk.id !== id);
-    setMicroTask(updatedMicrotask);
-  }; //Delete function is disabled in the application for the time being , it can be enabled by uncommenting the 9th line of the file 'TaskDisplay.jsx
- 
- 
-  return ( 
-   <div className="Microtaskwrap ml-6">
-    <h1>Microtasks</h1>
-    <TaskForm addMicrotask={addMicrotask} />
-    {microTask.map((tk) => 
-    {
-    return (
-      <div key={tk.id}>
-        <TaskDisplay
-          completed={tk.completed}
-          itemid={tk.id}
-          item={tk.task}
-          toggleComplete={toggleComplete}
-          deleteMicrotask={deleteMicrotask}
-        />
-      </div>)
-  
-})}
-   </div>
- )
- ;
-      
     </div>
   );
-
-
+}
 
 export default Addwork;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserNavIcon from "./UserNavIcon";
 import { userIcon } from "../assets";
 
-export const WorkBox = ({ Title, date, user, difficulty, pro }) => {
+export const WorkBox = ({ title, date, user, difficulty, pro }) => {
   let color = "";
 
   if (difficulty == 1) {
@@ -19,11 +19,11 @@ export const WorkBox = ({ Title, date, user, difficulty, pro }) => {
     >
       <div className="content ">
         <h1 className="Work-title text-white text-3xl font-extrabold mb-5">
-          Work Title
+          {title}
         </h1>
 
         {/* <p className="text-white text-lg font-semibold">Assigned to user</p> */}
-        <UserNavIcon icon={userIcon} name={"Harigovind"} hover="" />
+        <UserNavIcon icon={userIcon} name={user} hover="" />
         <p className="text-white text-sm font-semibold my-2">
           Due date: 12/2/23
         </p>

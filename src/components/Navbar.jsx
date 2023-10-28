@@ -5,7 +5,7 @@ import { project_1 } from "../constants";
 import NavDropdown from "./NavDropdown";
 import NavTeam from "./NavTeam";
 
-function Navbar({ setUser }) {
+function Navbar({ setUser, setTeamName }) {
   const [team, setTeam] = useState(project_1);
   useEffect(() => {
     setUser(team.users);
@@ -22,7 +22,7 @@ function Navbar({ setUser }) {
         <NavDropdown heading={"Members"} icons={dropdown} items={team} />
       </div>
       <div className="team">
-        <NavTeam setTeam={setTeam} />
+        <NavTeam setTeam={setTeam} setTeamName={setTeamName}/>
       </div>
     </div>
   );

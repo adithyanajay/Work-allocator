@@ -28,6 +28,7 @@ input:focus {
 
 textarea:focus {
     outline: none;
+}
 
 .completed{
     display: flex;
