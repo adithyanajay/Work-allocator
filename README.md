@@ -1,6 +1,7 @@
 # Dynamic Work Allocation Algorithm
 
 ## Table of Contents
+- [Team Members](#Team-Members)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Screenshots](#screenshots)
