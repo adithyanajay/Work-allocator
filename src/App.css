@@ -20,6 +20,15 @@
     
     
 }
+
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+
 .completed{
     display: flex;
     justify-content: space-between;
@@ -31,4 +40,5 @@
 
 .Microtaskwrap{
     width:fit-content;
+
 }

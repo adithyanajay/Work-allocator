@@ -1,13 +1,15 @@
-import React, { useDebugValue, useState } from "react";
+import React, { useDebugValue, useEffect, useState } from "react";
 import UserNavIcon from "./UserNavIcon";
 import { dropdown, userIcon } from "../assets";
 import { project_1 } from "../constants";
 import NavDropdown from "./NavDropdown";
 import NavTeam from "./NavTeam";
 
-function Navbar() {
+function Navbar({ setUser }) {
   const [team, setTeam] = useState(project_1);
-
+  useEffect(() => {
+    setUser(team.users);
+  }, [team]);
   return (
     <div className="navbar p-2 w-1/6 max-w-lg bg-whtie shadow-lg min-h-screen left-0 top-0 max-h-screen">
       <div className="logo w-full text-center py-10 border-b border-white">
