@@ -10,12 +10,14 @@ import { useState } from "react";
 
 function App() {
   const [users, setUser] = useState([]);
+  const [teamName, setTeamName] = useState("Team 1");
+
   return (
     <div className="max-h-screen">
       <div className="max-h-screen flex ">
-        <Navbar setUser={setUser} />
+        <Navbar setUser={setUser} setTeamName={setTeamName} />
         <div className="content w-full max-h-screen overflow-hidden">
-          <TopBar />
+          <TopBar teamName={teamName} />
           <Routes>
             <Route path="/" element={<Team />} />
             <Route path="/dashboard" element={<DashBoard />} />

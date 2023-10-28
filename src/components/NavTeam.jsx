@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import NavDropdown from "./NavDropdown";
 import { plus } from "../assets";
 import { projects } from "../constants";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { resetWork } from "../Redux/features/work/workSlice";
 
-function NavTeam({ setTeam }) {
+function NavTeam({ setTeam, setTeamName }) {
+  const dispatch = useDispatch();
   const [display, setDisplay] = useState(true);
-
+  const navigate = useNavigate();
   return (
     <div className="teams">
       <div className="heading flex items-center justify-start gap-3 border-b-2 py-2">
@@ -24,16 +28,18 @@ function NavTeam({ setTeam }) {
       >
         {projects.map((item, key) => {
           return (
-            <a href="/dashboard" key={key}>
-              <div
-                onClick={() => {
-                  setTeam(item.team);
-                }}
-                className="cursor-pointer my-2 bg-mainGreen rounded-md shadow-md hover:bg-secGreen"
-              >
-                <p className="text-white font-bold p-3">{item.name}</p>
-              </div>
-            </a>
+            <div
+              key={key}
+              onClick={() => {
+                setTeam(item.team);
+                navigate("/dashboard");
+                dispatch(resetWork());
+                setTeamName(item.name)
+              }}
+              className="cursor-pointer my-2 bg-mainGreen rounded-md shadow-md hover:bg-secGreen"
+            >
+              <p className="text-white font-bold p-3">{item.name}</p>
+            </div>
           );
         })}
       </div>
