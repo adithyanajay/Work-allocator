@@ -45,7 +45,7 @@ The project is in its prototype stage, and there are several areas for improveme
 <img width="1440" alt="Screenshot 2023-10-27 at 9 52 32 PM" src="https://github.com/adithyanajay/Work-allocator/assets/71365202/a483dc6c-2abf-4651-84bb-0807a59a34c9">
 
 ## Demo Video
-(Add a link to the demo video here)
+https://youtu.be/uU02We54-fo
 
 ## Microtasks and Progress Bars
 The project includes a feature for breaking down tasks into microtasks, allowing for better tracking and management. The progress of a task is displayed through a progress bar that reflects the completion of microtasks. For example, if a work has 10 microtasks and 6 are done, the progress bar will be filled to 60%.
