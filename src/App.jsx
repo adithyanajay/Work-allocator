@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -6,6 +6,7 @@ import { TopBar } from "./components/TopBar";
 import { DashBoard } from "./page/DashBoard";
 import Team from "./page/Team";
 import Notfound from "./page/Notfound";
+import Addwork from "./page/Addwork";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Team />} />
             <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/addwork" element={<Addwork />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </div>

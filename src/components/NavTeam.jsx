@@ -24,15 +24,16 @@ function NavTeam({ setTeam }) {
       >
         {projects.map((item, key) => {
           return (
-            <div
-              key={key}
-              onClick={() => {
-                setTeam(item.team);
-              }}
-              className="cursor-pointer my-2 bg-mainGreen rounded-md shadow-md hover:bg-secGreen"
-            >
-              <p className="text-white font-bold p-3">{item.name}</p>
-            </div>
+            <a href="/dashboard" key={key}>
+              <div
+                onClick={() => {
+                  setTeam(item.team);
+                }}
+                className="cursor-pointer my-2 bg-mainGreen rounded-md shadow-md hover:bg-secGreen"
+              >
+                <p className="text-white font-bold p-3">{item.name}</p>
+              </div>
+            </a>
           );
         })}
       </div>
