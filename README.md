@@ -1,6 +1,7 @@
 # Dynamic Work Allocation Algorithm
 
 ## Table of Contents
+- [Team Members](#Team-Members)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Screenshots](#screenshots)
@@ -14,6 +15,12 @@
   - [Creating Tasks](#creating-tasks)
   - [Task Assignment](#task-assignment)
 - [License](#license)
+
+## Team Members
+- [Adithya Ajay](https://github.com/adithyanajay)
+- [Harigovind M G](https://github.com/HarigovindM-G)
+- [Treesa George](https://github.com/tresanotfound)
+
 
 ## Introduction
 This project is a web-based application aimed at solving the problem of optimizing task assignment within a software development team. It employs a dynamic work allocation algorithm that considers various factors, including team members' skills, availability, and workload. The application is built using React.js and provides a dashboard for managers to create and manage tasks efficiently.
@@ -36,7 +43,6 @@ The project is in its prototype stage, and there are several areas for improveme
 ## Screenshots
 <img width="1431" alt="Screenshot 2023-10-27 at 9 53 39 PM" src="https://github.com/adithyanajay/Work-allocator/assets/71365202/c11d7aef-7be2-40b1-8c93-e6879f20be67">
 <img width="1440" alt="Screenshot 2023-10-27 at 9 52 32 PM" src="https://github.com/adithyanajay/Work-allocator/assets/71365202/a483dc6c-2abf-4651-84bb-0807a59a34c9">
-
 
 ## Demo Video
 (Add a link to the demo video here)
@@ -94,3 +100,8 @@ To run this project locally or deploy it on your server, follow these instructio
 
 
 Feel free to ask if you have any questions or need further clarification on any part of the documentation.
+
+
+
+
+
