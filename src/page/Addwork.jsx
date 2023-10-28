@@ -12,22 +12,27 @@ function Addwork({ users }) {
   const [difficulty, setDifficulty] = useState(1);
   const [selectedUser, setSelectedUser] = useState("");
   const [editUser, setEditUser] = useState(true);
+  const [date, setDate] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [microTask, setMicroTask] = useState([]);
 
   const submitWork = () => {
     if (
       workTitle !== "" &&
       description !== "" &&
       selectedUser !== "" &&
-      editUser !== true
+      editUser !== true &&
+      date !== ""
     ) {
       dispatch(
         updateWork({
           title: workTitle,
+          date: date,
           description: description,
           user: selectedUser,
-          difficulty: difficulty
+          difficulty: difficulty,
+          microTask: microTask,
         })
       );
       navigate("/dashboard");
@@ -35,8 +40,8 @@ function Addwork({ users }) {
   };
 
   return (
-    <div className="work h-full bg-slate-100 flex justify-center pb-30">
-      <div className="relative max-h-96 w-3/4 max-w-3xl bg-white px-5 py-10 rounded-md shadow-md h-fit mt-16 flex gap-5">
+    <div className="work h-full bg-slate-100 flex justify-center pb-2">
+      <div className="relative min-h-96 max-h-fit w-3/4 max-w-3xl bg-white px-8 py-8 rounded-md shadow-md h-fit mt-10 flex gap-5">
         <div className="content w-1/2 ">
           <div className="work-title flex items-center gap-3 ">
             <h1 className="text-mainGreen text-xl block">Work Title:</h1>
@@ -49,8 +54,9 @@ function Addwork({ users }) {
               onChange={(e) => setWorkTitle(e.target.value)}
             />
           </div>
-          <div className="description mt-5">
-            <h1 className="text-xl text-mainGreen mb-2">Description:</h1>
+
+          <div className="description mt-3">
+            <h1 className="text-base text-mainGreen mb-2">Description:</h1>
             <textarea
               name=""
               id=""
@@ -58,11 +64,21 @@ function Addwork({ users }) {
               rows="2"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="border-2 border-mainGreen rounded-lg resize-none p-3 text-base"
+              className="border-2 border-mainGreen rounded-lg resize-none p-3 text-base "
             ></textarea>
           </div>
-          <p className="text-mainGreen text-base mt-4">Difficulty:</p>
-          <form className="difficulty flex h-5">
+          <div className="due-date flex gap-3 items-center mt-4">
+            <h1 className="text-mainGreen text-base block">Due Date:</h1>
+            <input
+              type="date"
+              className="text-base text-mainGreen border-2 border-mainGreen rounded-md"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+
+          <p className="text-mainGreen text-base mt-3">Difficulty:</p>
+          <form className="difficulty flex items-center">
             <div className="container w-18 ">
               <input
                 type="radio"
@@ -101,7 +117,7 @@ function Addwork({ users }) {
             </div>
           </form>
 
-          <Todolist />
+          <Todolist microTask={microTask} setMicroTask={setMicroTask} />
         </div>
 
         <div className="user border-l-2 border-slate-200 pl-5">

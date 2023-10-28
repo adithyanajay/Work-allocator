@@ -4,8 +4,8 @@ import { useState } from "react";
 import { TaskDisplay } from "../components/TaskDisplay";
 import { TaskForm } from "../components/TaskForm";
 
-function Todolist() {
-  const [microTask, setMicroTask] = useState([]);
+function Todolist({microTask, setMicroTask}) {
+ 
 
   const addMicrotask = (microTaskText) => {
     const newMicrotask = {
@@ -29,22 +29,24 @@ function Todolist() {
   }; //Delete function is disabled in the application for the time being , it can be enabled by uncommenting the 9th line of the file 'TaskDisplay.jsx
 
   return (
-    <div className="Microtaskwrap ml-6">
-      <h1>Microtasks</h1>
+    <div className="Microtaskwrap mt-3">
+      <h1 className="text-base text-mainGreen">Microtasks:</h1>
       <TaskForm addMicrotask={addMicrotask} />
-      {microTask.map((tk) => {
-        return (
-          <div key={tk.id}>
-            <TaskDisplay
-              completed={tk.completed}
-              itemid={tk.id}
-              item={tk.task}
-              toggleComplete={toggleComplete}
-              deleteMicrotask={deleteMicrotask}
-            />
-          </div>
-        );
-      })}
+      <div className="tasks max-h-28 overflow-auto">
+        {microTask.map((tk) => {
+          return (
+            <div key={tk.id}>
+              <TaskDisplay
+                completed={tk.completed}
+                itemid={tk.id}
+                item={tk.task}
+                toggleComplete={toggleComplete}
+                deleteMicrotask={deleteMicrotask}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

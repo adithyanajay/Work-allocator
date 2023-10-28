@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { editIcon, plus, userIcon } from "../assets";
+import { editIcon, userIcon } from "../assets";
 import UserNavIcon from "../components/UserNavIcon";
-import { useNavigate } from "react-router-dom";
 
 function Team() {
   const [edit, setEdit] = useState(true);
@@ -67,6 +66,9 @@ function Team() {
                 }
               }}
             >
+              <h1 className="text-mainGreen text-xl font-bold mb-5">
+                Add Team member:
+              </h1>
               <div className="input mb-5 flex gap-5 items-center">
                 <p htmlFor="name" className="text-mainGreen text-lg w-15">
                   Name:
