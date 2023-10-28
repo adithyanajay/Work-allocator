@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Work() {
-  return (
-    <div>
-      Work
-    </div>
-  )
+  return <div className="h-full bg-slate-100 flex justify-center">Work</div>;
 }
 
-export default Work
+export default Work;
