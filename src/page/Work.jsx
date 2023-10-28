@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 function Work() {
-  return (
-    <div>
-      Work
+   return (
+    <div> 
+      Work   
     </div>
   )
 }
